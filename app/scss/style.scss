@@ -24,6 +24,10 @@ body {
     list-style: none;
     align-items: center;
     gap: 1rem;
+
+    @media screen and (width < 50rem) {
+      display: none;
+    }
   }
 
   #{&}__link {
@@ -33,6 +37,12 @@ body {
       m.color(neutral__dark-grayish-blue),
       var(--step--1)
     );
+  }
+
+  .btn {
+    @media screen and (width < 50rem) {
+      display: none;
+    }
   }
 }
 
@@ -60,6 +70,12 @@ body {
 .hero {
   #{&}__text-content {
     padding: 3rem 6rem;
+
+    @media screen and (width < 50rem) {
+      text-align: center;
+      padding: 1.5rem 3rem;
+      order: 2;
+    }
   }
 
   #{&}__heading {
@@ -86,10 +102,19 @@ body {
     padding: 3rem 6rem;
     position: relative;
     overflow: hidden;
+
+    @media screen and (width < 50rem) {
+      order: 1;
+      padding: 2rem;
+    }
   }
 
   #{&}__image {
     max-width: 30rem;
+
+    @media screen and (width < 50rem) {
+      max-width: 100%;
+    }
   }
 
   #{&}__pattern {
@@ -103,7 +128,9 @@ body {
 // ABOUT
 .about {
   position: relative;
-  //   overflow: hidden;
+  @media screen and (width < 50rem) {
+    overflow: hidden;
+  }
 
   #{&}__pattern {
     position: absolute;
@@ -115,6 +142,11 @@ body {
 
   #{&}__text-content {
     padding: 3rem 6rem;
+
+    @media screen and (width < 50rem) {
+      padding: 1.5rem 3rem;
+      text-align: center;
+    }
   }
 
   #{&}__heading {
@@ -132,6 +164,10 @@ body {
     flex-direction: column;
     gap: 2rem;
     padding: 3rem 6rem;
+
+    @media screen and (width < 50rem) {
+      padding: 1.5rem;
+    }
   }
 
   #{&}__features-item__header {
@@ -139,6 +175,21 @@ body {
     align-items: center;
     gap: 1rem;
     padding-block: 1rem;
+    position: relative;
+
+    @media screen and (width < 50rem) {
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 100%;
+        background-color: m.color(primary__bright-red);
+        max-height: 60%;
+        opacity: 0.25;
+        border-radius: 5rem;
+      }
+    }
   }
 
   .features__count {
@@ -220,6 +271,10 @@ body {
   overflow: hidden;
   z-index: 1;
 
+  @media screen and (width < 50rem) {
+    padding: 1.5rem 3rem;
+  }
+
   #{&}__pattern {
     position: absolute;
     left: 15%;
@@ -230,6 +285,11 @@ body {
   #{&}__cols {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (width < 50rem) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   #{&}__text {
@@ -245,6 +305,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (width < 50rem) {
+      justify-content: start;
+    }
   }
 }
 
@@ -256,6 +320,10 @@ body {
   #{&}__logo {
     display: inline-block;
     margin-bottom: 5rem;
+
+    @media screen and (width < 50rem) {
+      margin-bottom: 3rem;
+    }
 
     img {
       filter: invert(100%);
@@ -280,6 +348,11 @@ body {
   #{&}__links-wrapper {
     display: flex;
     justify-content: space-evenly;
+
+    @media screen and (width < 50rem) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   #{&}__links {
