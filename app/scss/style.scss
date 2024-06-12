@@ -192,3 +192,90 @@ body {
     padding-block: 5rem;
   }
 }
+
+// FOOTER
+.footer {
+  background-color: m.color(neutral__dark-blue);
+  padding: 3rem;
+
+  #{&}__logo {
+    display: inline-block;
+    margin-bottom: 5rem;
+
+    img {
+      filter: invert(100%);
+    }
+  }
+
+  #{&}__social-icons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  #{&}__social-icon {
+    width: 2rem;
+    display: block;
+  }
+
+  #{&}__links-wrapper {
+    display: flex;
+  }
+
+  #{&}__links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #{&}__link {
+    @include m.navlink(
+      m.color(neutral__pale-blue),
+      m.weight(medium),
+      m.color(neutral__dark-grayish-blue),
+      var(--step--1)
+    );
+  }
+
+  #{&}__copy {
+    color: m.color(neutral__dark-grayish-blue);
+    font-size: var(--step--1);
+    text-align: right;
+  }
+}
+
+.form {
+  #{&}__cols {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  #{&}__input {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5rem;
+    font-size: var(--step--1);
+    outline-offset: 0.125rem;
+    position: relative;
+
+    &:focus-visible {
+      outline: 0.125rem solid m.color(primary__bright-red);
+    }
+  }
+
+  #{&}__submit {
+    @include m.button(
+      white,
+      m.color(primary__bright-red),
+      m.weight(semibold),
+      var(--step--1)
+    );
+    border: none;
+  }
+}
