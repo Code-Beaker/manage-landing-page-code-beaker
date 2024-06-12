@@ -1,0 +1,52 @@
+@mixin navbar($bg) {
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $bg;
+}
+
+@mixin navlink($color, $wght, $hover) {
+  text-decoration: none;
+  color: $color;
+  padding: 0.5rem 1rem;
+  font-weight: $wght;
+  outline-offset: 0.125rem;
+  border-radius: 0.125rem;
+  //   transition: 100ms ease;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active {
+    text-decoration: underline 2px;
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $color;
+  }
+}
+
+@mixin primarybutton($color, $bg, $wght) {
+  padding: 0.75rem 1.5rem;
+  display: block;
+  border-radius: 5rem;
+  font-weight: $wght;
+  color: $color;
+  outline-offset: 0.125rem;
+  text-decoration: none;
+  background-color: $bg;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $bg;
+  }
+}
