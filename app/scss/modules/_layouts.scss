@@ -11,3 +11,9 @@
   grid-auto-rows: minmax(auto, 1fr);
   // align-items: center;
 }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
