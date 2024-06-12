@@ -46,6 +46,16 @@ body {
   //   background: green; (for preview only)
 }
 
+.btn__secondary {
+  @include m.button(
+    m.color(primary__bright-red),
+    white,
+    m.weight(semibold),
+    var(--step--1)
+  );
+  text-transform: capitalize;
+}
+
 // HERO
 .hero {
   #{&}__text-content {
@@ -167,7 +177,8 @@ body {
   background-color: m.color(neutral__light-gray);
   padding: 4rem;
   inset: 0;
-  margin: 3rem auto;
+  margin: 2rem auto;
+  margin-top: 4rem;
   padding-top: 3rem;
   max-width: 50rem;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -199,6 +210,42 @@ body {
   justify-content: center;
   align-items: center;
   padding-block: 5rem;
+}
+
+// SIMPLIFY
+.simplify {
+  padding: 5rem 10rem;
+  background-color: m.color(primary__bright-red);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  #{&}__pattern {
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  #{&}__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #{&}__text {
+    padding-right: 2rem;
+  }
+
+  #{&}__heading {
+    font-size: var(--step-2);
+    color: white;
+  }
+
+  #{&}__btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 // FOOTER
