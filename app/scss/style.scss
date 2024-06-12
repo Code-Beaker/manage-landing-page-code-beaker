@@ -259,6 +259,23 @@ body {
     margin-bottom: 5rem;
   }
 
+  #{&}__label {
+    color: m.color(neutral__dark-grayish-blue);
+    display: block;
+    margin-block: 0.5rem;
+    font-size: var(--step--1);
+  }
+
+  .status-error {
+    font-weight: m.weight(medium);
+    color: m.color(primary__bright-red);
+  }
+
+  .status-success {
+    color: #5aaa95;
+    font-weight: m.weight(medium);
+  }
+
   #{&}__input {
     padding: 0.5rem 1.5rem;
     border: none;
