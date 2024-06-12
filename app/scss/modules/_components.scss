@@ -6,8 +6,9 @@
   background-color: $bg;
 }
 
-@mixin navlink($color, $wght, $hover) {
+@mixin navlink($color, $wght, $hover, $size) {
   text-decoration: none;
+  font-size: $size;
   color: $color;
   padding: 0.5rem 1rem;
   font-weight: $wght;
@@ -28,17 +29,20 @@
   }
 }
 
-@mixin primarybutton($color, $bg, $wght) {
+@mixin button($color, $bg, $wght, $size) {
   padding: 0.75rem 1.5rem;
   display: block;
+  font-size: $size;
   border-radius: 5rem;
   font-weight: $wght;
+  min-width: fit-content;
   color: $color;
   outline-offset: 0.125rem;
   text-decoration: none;
   background-color: $bg;
 
   &:hover {
+    box-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
     opacity: 0.75;
   }
 
