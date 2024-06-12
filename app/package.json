@@ -13,6 +13,7 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "validator": "^13.12.0"
   }
 }
