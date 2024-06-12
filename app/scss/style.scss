@@ -161,36 +161,44 @@ body {
     text-align: center;
     margin-bottom: 5rem;
   }
+}
 
-  #{&}__item {
-    background-color: m.color(neutral__light-gray);
-    padding: 2rem 1rem;
-    padding-top: 3rem;
-    // box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    border-radius: 0.25rem;
-    text-align: center;
-    position: relative;
-  }
+.testimonials__item {
+  background-color: m.color(neutral__light-gray);
+  padding: 4rem;
+  inset: 0;
+  margin: 3rem auto;
+  padding-top: 3rem;
+  max-width: 50rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+}
 
-  #{&}__item__img {
-    max-width: 4.5rem;
-    position: absolute;
-    inset: 0;
-    top: -20%;
-    margin-inline: auto;
-  }
+.testimonials__item__img {
+  max-width: 5rem;
+  position: absolute;
+  inset: 0;
+  top: -20%;
+  margin-inline: auto;
+  z-index: 2;
+}
 
-  .testimonial__name {
-    font-size: var(--step--1);
-    margin-bottom: 1rem;
-  }
+.testimonial__name {
+  font-size: var(--step-1);
+  margin-bottom: 1rem;
+}
 
-  #{&}__btn-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block: 5rem;
-  }
+.testimonial__text {
+  font-size: var(--step-0);
+}
+
+.testimonials__btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 5rem;
 }
 
 // FOOTER

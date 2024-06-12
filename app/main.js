@@ -22,3 +22,15 @@ form.addEventListener("submit", (e) => {
     emailStatus.classList.add("status-success");
   }
 });
+
+new Splide(".splide", {
+  type: "loop",
+  perPage: 3,
+  height: "30rem",
+  lazyLoad: "true",
+  breakpoints: {
+    640: {
+      height: "20rem",
+    },
+  },
+});
