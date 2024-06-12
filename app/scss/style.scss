@@ -5,6 +5,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+// NAVBAR
 .navbar {
   @include m.navbar(white);
 
@@ -29,16 +30,61 @@ body {
     @include m.navlink(
       m.color(neutral__dark-blue),
       m.weight(medium),
-      m.color(neutral__dark-grayish-blue)
+      m.color(neutral__dark-grayish-blue),
+      var(--step--1)
     );
   }
 }
 
-.btn {
-  @include m.primarybutton(
+.btn__primary {
+  @include m.button(
     white,
     m.color(primary__bright-red),
-    m.weight(semibold)
+    m.weight(semibold),
+    var(--step--1)
   );
-  //   background: green;
+  //   background: green; (for preview only)
+}
+
+// HERO
+.hero {
+  #{&}__text-content {
+    padding: 3rem 6rem;
+  }
+
+  #{&}__heading {
+    font-size: var(--step-4);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  #{&}__text {
+    font-size: var(--step--1);
+    color: m.color(neutral__dark-grayish-blue);
+    margin-bottom: 2rem;
+  }
+
+  #{&}__btn {
+    display: inline-block;
+  }
+
+  #{&}__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #{&}__image {
+    max-width: 30rem;
+  }
+
+  #{&}__pattern {
+    position: absolute;
+    top: -50%;
+    right: -25%;
+    z-index: -1;
+  }
 }
