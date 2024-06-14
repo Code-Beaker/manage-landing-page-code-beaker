@@ -42,12 +42,18 @@ body {
     display: none;
     border: none;
     outline: none;
+    font-size: var(--step-2);
+    font-weight: m.weight(bold);
     cursor: pointer;
     outline-offset: 0.25rem;
     border-radius: 0.25rem;
     padding: 0.5rem;
     background-color: transparent;
     transition: 0.125s ease;
+
+    & i {
+      display: block;
+    }
 
     @media screen and (width < 50rem) {
       display: block;

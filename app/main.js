@@ -33,9 +33,11 @@ navigationToggleButton.addEventListener("click", () => {
   navigationLinks.classList.toggle("links-show");
 
   if (navigationLinks.classList.contains("links-show")) {
-    toggleIcon.src = "./assets/images/icon-close.svg";
+    toggleIcon.classList.add("bi-x");
+    toggleIcon.classList.remove("bi-list");
   } else {
-    toggleIcon.src = "./assets/images/icon-hamburger.svg";
+    toggleIcon.classList.remove("bi-x");
+    toggleIcon.classList.add("bi-list");
   }
 });
 
