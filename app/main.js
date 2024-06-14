@@ -1,6 +1,7 @@
 import validator from "validator";
 import isEmail from "validator/lib/isEmail";
 import "./typeScales.css";
+import "./scss/style.scss";
 
 // Navigation elements
 const navigationToggleButton = document.getElementById("navigationToggle");
