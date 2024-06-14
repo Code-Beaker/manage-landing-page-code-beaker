@@ -2,6 +2,11 @@ import validator from "validator";
 import isEmail from "validator/lib/isEmail";
 import "./typeScales.css";
 
+// Navigation elements
+const navigationToggleButton = document.getElementById("navigationToggle");
+const navigationLinks = document.querySelector(".navbar__links");
+const toggleIcon = document.getElementById("navigationToggleIcon");
+
 const d = new Date().getFullYear();
 document.getElementById("year").textContent = d;
 
@@ -23,6 +28,12 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+// Toggle Navigation Menu
+navigationToggleButton.addEventListener("click", () => {
+  navigationLinks.classList.toggle("links-show");
+});
+
+// Slides
 new Splide(".splide", {
   type: "loop",
   perPage: 3,

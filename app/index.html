@@ -21,9 +21,22 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   <body>
     <header class="header">
       <nav class="navbar">
-        <a href="index.html" class="navbar__brand">
-          <img src="assets/images/logo.svg" alt="" class="navbar__logo" />
-        </a>
+        <div class="navbar__top">
+          <a href="index.html" class="navbar__brand">
+            <img src="assets/images/logo.svg" alt="" class="navbar__logo" />
+          </a>
+          <button
+            class="navbar__toggle-btn"
+            aria-hidden="false"
+            id="navigationToggle"
+          >
+            <img
+              id="navigationToggleIcon"
+              src="assets/images/icon-hamburger.svg"
+              alt="hamburger icon"
+            />
+          </button>
+        </div>
         <ul class="navbar__links">
           <li class="navbar__item">
             <a href="#" class="navbar__link">Pricing</a>

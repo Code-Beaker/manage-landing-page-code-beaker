@@ -9,13 +9,40 @@ body {
 .navbar {
   @include m.navbar(white);
 
+  @media screen and (width < 50rem) {
+    flex-direction: column;
+    justify-content: center;
+    min-height: fit-content;
+  }
+
+  #{&}__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   #{&}__brand {
     display: block;
     border-radius: 0.125rem;
+    padding: 0.25rem;
     outline-offset: 0.125rem;
 
     &:focus-visible {
       outline: 0.125rem solid m.color(primary__bright-red);
+    }
+  }
+
+  // Toggle Button
+  #{&}__toggle-btn {
+    display: block;
+    border: none;
+    outline: none;
+    outline-offset: 0.125rem;
+    background-color: transparent;
+
+    &:focus-visible {
+      outline: 0.125rem dashed currentColor;
     }
   }
 
@@ -26,8 +53,23 @@ body {
     gap: 1rem;
 
     @media screen and (width < 50rem) {
-      display: none;
+      // display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+      // padding: 1rem;
+      opacity: 0;
+      transition: 0.25s ease-in-out;
     }
+  }
+
+  .links-show {
+    opacity: 1;
+    height: 15rem;
   }
 
   #{&}__link {
