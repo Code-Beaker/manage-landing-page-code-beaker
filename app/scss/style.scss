@@ -19,13 +19,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: fit-content;
+
+    @media screen and (width < 50rem) {
+      width: 100%;
+    }
   }
 
   #{&}__brand {
     display: block;
     border-radius: 0.125rem;
-    padding: 0.25rem;
+    padding: 0.5rem;
     outline-offset: 0.125rem;
 
     &:focus-visible {
@@ -35,11 +39,23 @@ body {
 
   // Toggle Button
   #{&}__toggle-btn {
-    display: block;
+    display: none;
     border: none;
     outline: none;
-    outline-offset: 0.125rem;
+    cursor: pointer;
+    outline-offset: 0.25rem;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
     background-color: transparent;
+    transition: 0.125s ease;
+
+    @media screen and (width < 50rem) {
+      display: block;
+    }
+
+    &:focus {
+      background-color: m.color(neutral__pale-blue);
+    }
 
     &:focus-visible {
       outline: 0.125rem dashed currentColor;

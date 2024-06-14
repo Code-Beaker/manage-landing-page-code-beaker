@@ -31,6 +31,12 @@ form.addEventListener("submit", (e) => {
 // Toggle Navigation Menu
 navigationToggleButton.addEventListener("click", () => {
   navigationLinks.classList.toggle("links-show");
+
+  if (navigationLinks.classList.contains("links-show")) {
+    toggleIcon.src = "./assets/images/icon-close.svg";
+  } else {
+    toggleIcon.src = "./assets/images/icon-hamburger.svg";
+  }
 });
 
 // Slides
