@@ -41,6 +41,16 @@
     />
   </head>
   <body>
+    <!-- SKIP TO CONTENT LINK -->
+    <div class="skip-link-container">
+      <a
+        href="#content"
+        aria-label="Skip to content"
+        tabindex="0"
+        class="skip-link"
+        >Skip to content</a
+      >
+    </div>
     <!-- Navigation -->
     <nav class="navbar">
       <div class="navbar__top">
@@ -87,7 +97,7 @@
         >Get started</a
       >
     </nav>
-    <header class="hero">
+    <header id="content" tabindex="-1" class="hero">
       <div class="hero__cols">
         <article class="hero__text-content">
           <h1 class="hero__heading">
