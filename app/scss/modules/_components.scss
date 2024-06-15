@@ -1,6 +1,7 @@
 @mixin navbar($bg) {
   padding: 2.5rem;
   display: flex;
+  font-family: inherit;
   justify-content: space-around;
   align-items: center;
   background-color: $bg;
@@ -10,6 +11,7 @@
   text-decoration: none;
   font-size: $size;
   color: $color;
+  font-family: inherit;
   padding: 0.5rem 1rem;
   font-weight: $wght;
   outline-offset: 0.125rem;
@@ -34,6 +36,8 @@
   display: block;
   font-size: $size;
   border-radius: 5rem;
+  text-transform: capitalize;
+  font-family: inherit;
   font-weight: $wght;
   cursor: pointer;
   min-width: fit-content;
