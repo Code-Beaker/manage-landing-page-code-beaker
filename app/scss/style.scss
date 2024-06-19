@@ -43,6 +43,7 @@ body {
     flex-direction: column;
     justify-content: center;
     min-height: fit-content;
+    padding: 1rem;
   }
 
   #{&}__top {
