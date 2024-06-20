@@ -18,7 +18,7 @@ Different tools and languages used to create this project.
 - [Vite](https://vitejs.dev)
 - Firefox
 - Brave
-- [Validator - A library to validate forms]()
+- [Validator - A library to validate forms](https://npmjs.com/packages/validator)
 - [Bootstrap Icons](https://icons.getbootstrap.com)
 - [Splide](https://splidejs.com/)
 
