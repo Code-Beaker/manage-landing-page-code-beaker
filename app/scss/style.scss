@@ -86,10 +86,6 @@ body {
     background-color: transparent;
     transition: 0.125s ease;
 
-    & i {
-      display: block;
-    }
-
     @media screen and (width < 50rem) {
       display: block;
     }
@@ -115,18 +111,18 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      height: 0;
+      height: fit-content;
       margin: 0;
+      display: none;
       overflow: hidden;
       padding: 1rem;
-      opacity: 0;
+      opacity: 1;
       transition: 0.25s ease-in-out;
     }
   }
 
   .links-show {
-    opacity: 1;
-    height: 15rem;
+    display: flex;
   }
 
   #{&}__link {

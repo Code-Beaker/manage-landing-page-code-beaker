@@ -2,6 +2,8 @@ import validator from "validator";
 import isEmail from "validator/lib/isEmail";
 import "./typeScales.css";
 import "./scss/style.scss";
+import menuOpenIcon from "./assets/compImg/icon-hamburger.svg";
+import menuCloseIcon from "./assets/compImg/icon-close.svg";
 
 // Navigation elements
 const navigationToggleButton = document.getElementById("navigationToggle");
@@ -34,11 +36,9 @@ navigationToggleButton.addEventListener("click", () => {
   navigationLinks.classList.toggle("links-show");
 
   if (navigationLinks.classList.contains("links-show")) {
-    toggleIcon.classList.add("bi-x");
-    toggleIcon.classList.remove("bi-list");
+    toggleIcon.setAttribute("src", menuCloseIcon);
   } else {
-    toggleIcon.classList.remove("bi-x");
-    toggleIcon.classList.add("bi-list");
+    toggleIcon.setAttribute("src", menuOpenIcon);
   }
 });
 
