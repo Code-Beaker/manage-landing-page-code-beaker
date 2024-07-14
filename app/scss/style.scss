@@ -37,13 +37,18 @@ body {
 
 // NAVBAR
 .navbar {
-  @include m.navbar(white);
+  @include m.navbar(m.color(neutral__white));
 
   @media screen and (width < 50rem) {
     flex-direction: column;
     justify-content: center;
+    background-color: hsla(from m.color(neutral__white) h s l / 0.95);
+    backdrop-filter: blur(0.5rem);
     min-height: fit-content;
     padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
   }
 
   #{&}__top {

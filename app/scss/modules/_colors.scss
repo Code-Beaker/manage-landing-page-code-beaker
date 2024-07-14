@@ -5,6 +5,7 @@ $colors: (
   neutral__dark-blue: hsl(233, 12%, 13%),
   neutral__pale-blue: hsl(13, 100%, 96%),
   neutral__light-gray: hsl(0, 0%, 98%),
+  neutral__white: hsl(0, 0%, 100%),
 );
 
 @function color($color-name) {
