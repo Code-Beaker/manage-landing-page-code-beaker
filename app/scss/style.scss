@@ -206,6 +206,7 @@ body {
     @media screen and (width < 50rem) {
       order: 1;
       padding: 2rem;
+      padding-top: calc(2.3rem * 2);
     }
   }
 
