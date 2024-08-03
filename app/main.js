@@ -32,7 +32,7 @@ form.addEventListener("submit", (e) => {
 });
 
 // Toggle Navigation Menu
-navigationToggleButton.addEventListener("click", () => {
+const handleNavigationToggle = () => {
   navigationLinks.classList.toggle("links-show");
 
   if (navigationLinks.classList.contains("links-show")) {
@@ -40,7 +40,9 @@ navigationToggleButton.addEventListener("click", () => {
   } else {
     toggleIcon.setAttribute("src", menuOpenIcon);
   }
-});
+};
+
+navigationToggleButton.addEventListener("click", handleNavigationToggle);
 
 // Slides
 new Splide(".splide", {
